@@ -21,14 +21,25 @@ if($intTwo==$intThree){
 //why when there are two separate conditions it just prints the result of one?
 // Why when they all are one scope I don't get the result if two of them are true.
 
+//Often you'd want to have more than one statement to be executed conditionally. Of course, there's no need to wrap each statement with an if clause. Instead, you can group several statements into a statement group. For example, this code would display a is bigger than b if $a is bigger than $b, and would then assign the value of $a into $b:
+
 $a=5;
 $b=2;
 if ($a > $b) {
 
-    echo "<br> a is bigger than b";
-    $b = $a;
+    echo "<br> a is bigger than b <br>";
+     //$b = $a; when I assign new values to the variables the results from under don't display anymore in the browser. why?
+    echo "<br>$b = $a";
 }
 
-//I don't understand the logic for $b=$a
-//Often you'd want to have more than one statement to be executed conditionally. Of course, there's no need to wrap each statement with an if clause. Instead, you can group several statements into a statement group. For example, this code would display a is bigger than b if $a is bigger than $b, and would then assign the value of $a into $b:
+// the option of above it's a better practice than this one. Even tho both are the same.
+if ($a > $b) {
+    echo '<br> a is bigger than the character b ';
+}
+
+if ($a > $b){
+    echo"<br> $b = $a";
+}
+
+
 
